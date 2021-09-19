@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    </meta>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no" />
+    </meta>
+    <link rel="shortcut icon" href="#" />
+
+    <link rel="stylesheet" href="./lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/css/playfairDisplay.css">
+    <link rel="stylesheet" href="./lib/css/montserrat.css">
+    <link rel="stylesheet" href="./lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="oodlesAIChatbot.css" />
+
+    <script type="text/javascript" src="./lib/js/jquery-3.4.1.slim.min.js"></script>
+    <script type="text/javascript" src="./lib/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="./lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/js/popper.min.js"></script>
+    <script type="text/javascript" src="oodlesAIChatbot.js"></script>
+    <script type="text/javascript" src="./lib/js/moment.min.js"></script>
+    
+    <title>Rocket_chat AI chatbot</title>
+
+</head>
+
+<body>
+    <div class="chat-bubble border-new round tri-right btm-left-in chat-bubble-icon" id="chat-cross">
+        <div class="chat-with-us">Chat With Us
+            <i class="fa fa-close cross-icon-new" onclick="closeChatBubble()"></i>
+        </div>
+    </div>
+    <!-- chat-popup -->
+    <div class="float">
+        <a onclick="openChat()" class="chat--icon">
+            <img src="images/logo.png" class="my-float" style="border-radius: 50%; object-fit: cover;" >
+        </a>
+        <div class="form-container" style="width: 500px;padding-right: 100px;">
+            <nav class="navbar navbar-light bg-header">
+                <div class="logo-text">
+                    <a class="navbar-brand" href="#" ><img src="images/logo.png" class="logo-size"></a>
+                    <div class="text-heading"> 
+                        <p style="font-size:20px;" class="oodles-heading">MES Solutions</p>
+                        <!-- <p class="sub-heading"></p> -->
+                    </div>
+                    <div class="cross">
+                        <i class="fa fa-close cross-icon" onclick="closeChat()"></i>
+                    </div>
+                </div>
+                <div class="line">
+                    <img src="images/line.png" class="line-class">
+                </div>
+            </nav>
+
+            <div class="modal-content modalNewBody" onclick="clickOnModalSection(event)">
+
+            </div>
+
+
+
+            <div class="chatUi">
+                <div><button id="restart" style="margin-top:10px;color: #007adb;
+                 background-color: white; border: 2px solid #007adb;
+                 position: fixed; right: 25px;" 
+                class="btn btn-warning float-right">Restart</button></div>
+               
+                <div class="messaging" id="chatBotMessageSection" style="margin-top: 20px;">
+
+                    <div class="inbox_msg">
+                        <div class="mesgs">
+                            <div class="msg_history">
+                                <div class="row incoming_msg">
+                                    <div class="chat-output received_msg" id="chat-output" onclick="scrollToView();">
+
+                                    </div>
+                                
+                                    <div id="wave" style="display: none; margin-bottom: 5px;">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </div>
+                                </div>
+                                <div class="quickReplies">
+                                    <div id="quickReplies"  onclick="scrollToView();"></div>
+
+                                </div>
+                                <div id="initreply"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="type_msg">
+                <div class="input_msg_write" id="textField">
+                    <input type="text" id="user-input" class="user-input write_msg" placeholder="Type here..">
+                    <button id="submitInputButton" class="fa fa-paper-plane errspan" type="submit"
+                        onclick="submitInput();" disabled>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

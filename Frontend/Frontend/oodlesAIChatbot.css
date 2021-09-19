@@ -1,0 +1,595 @@
+.modal-content{
+    border:none;
+}
+
+.line{
+    position: absolute;
+    left: 0;
+    top: 75px !important;
+}
+.chat-bubble{
+    position: fixed;
+    right: 20px;
+    bottom: 122px;
+    z-index: 9999;
+}
+.chat-with-us{
+    width: 140px;
+    border-radius: 8px;
+    background: #fff; 
+    height: 45px;
+    padding: 12px;
+    font-size: 15px;   
+}   
+.border-new{
+    border: 2px solid #007adb!important;
+}
+.round{
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+.tri-right.border-new.btm-left-in:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 107px;
+    right: auto;
+    top: auto;
+    bottom: -18px;
+    border: 8px solid;
+    border-color: #007adb transparent transparent #007adb;
+}
+
+.tri-right.btm-left-in:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 110px;
+    right: auto;
+    top: auto;
+    bottom: -10px;
+    border: 5px solid;
+    border-color: white transparent transparent white;
+}
+.cross-icon-new{
+    color: #007adb!important;
+    cursor: pointer;
+    top: 5%;
+    position: absolute;
+    left: 89%;
+}
+.bg-header {
+    background: #007adb;
+    -webkit-box-shadow: 0px 12px 25px 0px #ccc;
+    -moz-box-shadow: 0px 12px 25px 0px #ccc;
+    box-shadow: 0px 12px 25px 0px #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left;
+}
+.logo-size{
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+
+}
+.text-heading {
+    padding-top: 10px;
+}
+.text-heading p{
+    margin: 0;
+    color: #fff;
+}
+.oodles-heading{
+    font-weight: bolder;
+    font-size: 16px
+}
+.sub-heading{
+    font-size: 14px
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+    /* overflow: hidden; */
+   
+}
+.chatUi{
+    height: 370px;
+    padding: 0 28px;
+    overflow: auto;
+    visibility: hidden;
+}
+.messaging, .chatUi:hover, .chatUi:focus {
+  visibility: visible;
+ 
+}
+
+
+.chatUi::-webkit-scrollbar {
+    width: 5px;
+  }
+ 
+.chatUi::-webkit-scrollbar-thumb {
+  border-radius:10px;
+  background-color: darkgrey;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+}
+/*---------chat window---------------*/
+.incoming_msg_img {
+	display: inline-block;
+	width: 6%;
+}
+
+.incoming_msg_img img {
+	width: 100%;
+}
+
+.received_msg {
+	display: inline-block;
+    padding: 22px 0px 0px 0px;
+    vertical-align: top;
+    width: 100%;
+}
+.receive-message{
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
+    display: flex;
+    width: 100%;
+
+}
+.received_withd_msg p {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 5px 20px 20px 20px;
+    color: #000;
+    font-size: 14px;
+    margin: 11px;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    white-space: normal;
+}
+
+.received_withd_msg div {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px 20px 20px 20px;
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    white-space: normal;
+    float: left;
+}
+
+.received_withd_msg {
+    display: inline-block;
+    /* margin-top: 10px; */
+    width: 100%;
+
+}
+
+.mesgs{
+	/* padding: 30px 15px 0 25px; */
+	width:100%;
+}
+
+.sent_msg p {
+	background: #007adb;
+    border-radius: 20px 20px 5px 20px;
+    font-size: 14px;
+    margin: 0;
+    color: #fff;
+    padding: 15px 20px;
+    width: 100%;
+	font-family: 'Lato', sans-serif;
+	  /* word-break: break-word; */
+      white-space: normal;
+}
+
+.outgoing_msg {
+	overflow: hidden;
+	/* margin: 12px 0 2px; */
+}
+
+.sent_msg {
+	float: right;
+}
+
+.input_msg_write input {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    color: #041e42;
+    font-size: 14px;
+    width: 100%;
+    padding: 13px 20px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 35px;
+    -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px -6px 10px 0 #ccc;
+}
+
+.errspan {
+    float: right;
+    margin-right: 16px;
+    margin-top: -34px;
+    position: relative;
+    z-index: 2;
+    background: transparent none repeat scroll 0 0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.type_msg {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+input:focus {
+    outline: 0;
+}
+
+.logo-text{
+    display: flex;
+}
+
+.incoming_msg {
+    margin: 0;
+   /*  height: 56px; */
+
+    /* overflow-y: scroll; */
+}
+button:focus {
+    outline: 0;
+}
+div#wave {
+	position: relative;
+    padding: 15px 18px;
+    text-align: left;
+}
+div#wave .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 3px;
+    background: #007adb;
+    animation: wave 1.3s linear infinite;
+}
+div#wave .dot:nth-child(2) {
+    animation-delay: -1.1s;
+}
+div#wave .dot:nth-child(3) {
+    animation-delay: -0.9s;
+}
+  
+  @keyframes wave {
+	0%,
+	  60%,
+	  100% {
+	  transform: initial;
+	}
+	30% {
+	  transform: translateY(-15px);
+	}
+  }
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */
+.bot-time{
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #797979;
+    padding : 0 30px;
+    margin-top: 10px;
+}
+.user-time{
+    margin-bottom: -20px;
+    font-size: 13px;
+    color: #797979;
+    text-align: right;
+    padding: 0 30px;
+    margin-top: 17px;
+}
+.dots {
+    height: 5px;
+    width: 5px;
+    background-color: #797979;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .quickReplies{
+     overflow: hidden;
+     padding: 10px 0px;
+     text-align: center;
+     margin: 0 auto;  
+     scroll-padding: 0px 0 500px 0;
+
+     /*  position: absolute; 
+     top: 70px;  */
+	}
+#area{
+	display: inline-block;
+    /* white-space: nowrap; */
+    overflow-x: scroll;
+    width: 100%;
+     margin-top: 25px;
+     -ms-overflow-style: none; /* IE 11 */
+     scrollbar-width: none; /* Firefox 64 */
+}
+.replies{
+    display: inline-block;
+    border: 2px solid #007adb;
+    border-radius: 9px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 13px;
+    background-color: transparent;
+    color: #007adb;
+}
+.replies p{
+	margin: 0;
+}
+.replies:hover{
+    background-color: #007adb;
+    color: #fff;
+}
+
+.float{
+    position:fixed;
+	bottom:20px;
+	right:17px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    box-shadow: 2px 2px 3px #999;
+    cursor: pointer;
+ 
+}
+/* .msg_history{
+    animation: blur 4s ease 0s infinite;
+  -webkit-animation: blur 4s ease 0s infinite;
+  -moz-animation: blur 4s ease 0s infinite;
+  animation-iteration-count: 1
+} */
+
+
+.my-float{
+	width:60px;
+	height:60px;
+}
+.float.expand {
+    border: 2px solid #f1f1f1;
+    z-index: 9;
+    border-radius: 10px;
+    box-shadow: 0 8px 36px 0 rgba(0,18,46,0.16);
+    -webkit-box-shadow: 0 8px 36px 0 rgba(0,18,46,0.16);
+    -moz-box-shadow: 0 8px 36px 0 rgba(0,18,46,0.16);
+    max-height: calc(100% - 47px);
+    background: #e2f1ff;  
+    max-width: 390px; 
+    z-index: 99999; 
+    /* transition: all 250ms ease-in-out; */
+  }
+
+.form-height{
+    margin-bottom: 0;
+}
+.copy-wright{
+    text-align: center;
+    color: #fff;
+    background: #2f83c5;}
+
+.copy-wright p{
+    padding: 2px 0;
+    margin: 0;
+    }
+.fa{
+    color:#8a8787
+}
+.chat-bot-image-main-site{
+    z-index: 99999;
+}
+.line-class{
+    width: 100%;
+}
+  
+  /* Add styles to the form container */
+  .form-container {
+    /* max-width: 390px; */
+    border-radius: 10px;
+    /* transition: all 250ms ease-out; */
+  }
+  .cross-icon{
+    color: #fff;
+    margin-top: 2px;
+    cursor: pointer;
+    font-size: 21px;  
+    position: absolute;
+    right: 21px;
+}
+
+  .new-message{
+      padding-top: 20px;
+  }
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+    /*Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/ 
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {  
+
+	/* .msg_history {
+		height: 658px;
+    } */
+    /* .text-heading
+    {
+        margin-right: 6px;
+    } */
+    
+    .form-container {
+    background-color: #e2f1ff;
+    max-width: auto;
+    border-radius: 10px;
+    }   
+    .main-new-container-fluid {
+        height: 480px;
+    }
+    .sub-heading {
+        font-size: 13px;
+    }
+    .oodles-heading {
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .chat-popup{
+        right: 0;
+    }
+
+    .quickReplies {
+        padding: 10px 30px;
+    }
+    .replies {
+        padding: 5px 9px;
+    }
+    .cross{
+        width: 10px;
+    }
+    .cross-icon {
+        margin-left: 0;
+    }
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {  
+
+	/* .msg_history {
+		height: 658px;
+    } */
+    .text-heading{
+        margin-right: 6px;
+    }
+    .main-new-container-fluid {
+        height: 480px;
+        margin-top: 76px;
+    }
+    .sub-heading {
+        font-size: 13px;
+    }
+    .oodles-heading {
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    .chat-popup{
+        right: 0;
+    }
+ 
+    .quickReplies {
+        padding: 10px 30px;
+
+    }
+    .replies {
+        padding: 5px 9px;
+    }
+    .cross{
+        width: 10px;
+    }
+    .cross-icon {
+        margin-left: 0;
+    }
+  
+    .float {
+        right: 12px;
+    }
+    .line {
+        top: 77px;
+    }
+}
+ 
+/* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { 
+	.modalNewBody {
+		width: 78%;
+	}
+} */
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+
+}
+
+/* @media (min-width: 1024px) and (max-width: 1366px)and (-webkit-min-device-pixel-ratio: 2){
+	.modalNewBody {
+		width: 46%;
+	}
+} */
+/*
+
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+ 
+}
+
+
+
+/*ai chatbot css own*/
+
+.chat-bot-image-main-site{
+    z-index: 99999;
+}
+
+.chat-bubble{
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    z-index: 9999;
+}
+
+
+/*ai chatbot css end*/
+@keyframes blur {
+    0%,
+    90% {
+      -webkit-filter: blur(0px);
+      -moz-filter: blur(0px);
+      -o-filter: blur(0px);
+      -ms-filter: blur(0px);
+    }
+    50% {
+      -webkit-filter: blur(50px);
+      -moz-filter: blur(50px);
+      -o-filter: blur(50px);
+      -ms-filter: blur(50px);
+    }
+  }
+  .text-left{
+      text-align: left;
+      padding-left: 20px;
+      margin-bottom: 6px;
+  }
+  .row{
+    margin-top:10px;
+  }
+  
